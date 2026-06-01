@@ -76,15 +76,15 @@
     .store-col { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 
     .badge-apple, .badge-google {
-      display: flex; align-items: center; gap: 10px;
-      background: #000; border-radius: 12px; padding: 10px 20px;
+      display: flex; align-items: center; gap: 12px;
+      background: #000; border-radius: 10px; padding: 11px 22px;
       text-decoration: none; opacity: 0.5; pointer-events: none;
-      transition: opacity 0.2s; min-width: 160px;
+      transition: opacity 0.2s; min-width: 180px; border: 1px solid #333;
     }
-    .badge-apple svg, .badge-google svg { flex-shrink: 0; }
+    .badge-apple svg, .badge-google svg { flex-shrink: 0; width: 28px; height: 28px; }
     .badge-text { display: flex; flex-direction: column; }
-    .badge-sub { font-size: 10px; color: rgba(255,255,255,0.75); line-height: 1; margin-bottom: 2px; }
-    .badge-main { font-size: 17px; font-weight: 600; color: #fff; line-height: 1; }
+    .badge-sub { font-size: 11px; color: rgba(255,255,255,0.80); line-height: 1; margin-bottom: 3px; letter-spacing: 0.2px; font-family: -apple-system, "DM Sans", sans-serif; }
+    .badge-main { font-size: 22px; font-weight: 700; color: #fff; line-height: 1; letter-spacing: -0.3px; font-family: -apple-system, "DM Sans", sans-serif; }
 
     .qr-box {
       width: 96px; height: 96px; background: var(--card);
@@ -115,7 +115,7 @@
     .how-section .section-title { color: #fff; }
     .how-section .section-subtitle { color: rgba(255,255,255,0.6); }
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 32px; }
-    .step-number { font-family: 'Fraunces', serif; font-size: 56px; font-weight: 300; color: rgba(255,255,255,0.08); line-height: 1; margin-bottom: 16px; }
+    .step-number { font-family: 'Fraunces', serif; font-size: 56px; font-weight: 300; color: rgba(255,255,255,0.22); line-height: 1; margin-bottom: 16px; }
     .step-accent { width: 32px; height: 3px; background: var(--amber); border-radius: 2px; margin-bottom: 20px; }
     .step-title { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; color: #fff; margin-bottom: 10px; }
     .step-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.65; }
