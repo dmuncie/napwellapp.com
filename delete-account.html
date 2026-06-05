@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account — Napwell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #2D2A5E; --amber: #D4803A; --purple: #7F77DD; --teal: #1D9E75;
+      --bg: #E8E2D5; --card: #FFFFFF; --ink: #1A1830;
+      --ink-soft: rgba(45,42,94,0.65); --ink-muted: rgba(45,42,94,0.40);
+      --rose: #C0392B;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.7; }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 32px; background: rgba(232,226,213,0.95);
+      border-bottom: 1px solid rgba(45,42,94,0.08);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 32px; height: 32px; border-radius: 7px; }
+    .nav-logo-text { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; color: var(--navy); }
+    .nav-back { font-size: 14px; color: var(--ink-soft); text-decoration: none; }
+    .nav-back:hover { color: var(--navy); }
+    .container { max-width: 720px; margin: 0 auto; padding: 64px 24px 100px; }
+    .page-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--amber); margin-bottom: 14px; }
+    h1 { font-family: 'Fraunces', serif; font-size: 42px; font-weight: 300; color: var(--navy); letter-spacing: -1px; line-height: 1.1; margin-bottom: 12px; }
+    .updated { font-size: 13px; color: var(--ink-muted); margin-bottom: 48px; }
+    .content { background: var(--card); border-radius: 20px; padding: 48px; border: 1px solid rgba(45,42,94,0.06); }
+    h2 { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 400; color: var(--navy); margin-top: 40px; margin-bottom: 14px; }
+    h2:first-child { margin-top: 0; }
+    p { font-size: 15px; color: var(--ink-soft); margin-bottom: 16px; }
+    ul { margin: 0 0 16px 0; padding-left: 20px; }
+    li { font-size: 15px; color: var(--ink-soft); margin-bottom: 8px; }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .step-list { list-style: none; padding: 0; counter-reset: steps; }
+    .step-list li {
+      counter-increment: steps; display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px 0; border-bottom: 1px solid rgba(45,42,94,0.06);
+    }
+    .step-list li:last-child { border-bottom: none; }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--purple); color: #fff; font-size: 13px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+    .step-text { flex: 1; }
+    .step-text strong { display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+    .step-text span { font-size: 14px; color: var(--ink-soft); }
+    .highlight {
+      background: rgba(29,158,117,0.06); border-left: 3px solid var(--teal);
+      padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 24px 0;
+    }
+    .highlight p { margin: 0; color: var(--ink); }
+    .warning {
+      background: rgba(192,57,43,0.06); border-left: 3px solid var(--rose);
+      padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 24px 0;
+    }
+    .warning p { margin: 0; color: var(--ink); }
+    .email-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--navy); color: #fff; padding: 12px 24px;
+      border-radius: 12px; font-size: 15px; font-weight: 600;
+      text-decoration: none; margin-top: 8px; transition: background 0.2s;
+    }
+    .email-cta:hover { background: var(--purple); text-decoration: none; color: #fff; }
+    footer { background: var(--navy); padding: 32px; text-align: center; }
+    footer p { font-size: 13px; color: rgba(255,255,255,0.4); margin: 0; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; margin: 0 12px; }
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .container { padding: 40px 20px 80px; }
+      .content { padding: 28px 20px; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="napwell-icon-1024.png" alt="Napwell" />
+      <span class="nav-logo-text">Napwell</span>
+    </a>
+    <a href="index.html" class="nav-back">← Back to home</a>
+  </nav>
+
+  <div class="container">
+    <p class="page-label">Account</p>
+    <h1>Delete your account</h1>
+    <p class="updated">Last updated: June 2026</p>
+
+    <div class="content">
+
+      <div class="highlight">
+        <p><strong>You can request account deletion at any time.</strong> Send an email to <a href="mailto:napwellapp@gmail.com">napwellapp@gmail.com</a> and we will process your request within 30 days.</p>
+      </div>
+
+      <h2>How to request deletion</h2>
+      <ol class="step-list">
+        <li>
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <strong>Send an email</strong>
+            <span>Email <a href="mailto:napwellapp@gmail.com">napwellapp@gmail.com</a> with the subject line "Account deletion request"</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <strong>Include your account email</strong>
+            <span>Include the email address you used to create your Napwell account so we can locate your data</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <strong>Confirmation</strong>
+            <span>We will confirm receipt of your request and process the deletion within 30 days</span>
+          </div>
+        </li>
+      </ol>
+
+      <a href="mailto:napwellapp@gmail.com?subject=Account%20deletion%20request" class="email-cta">
+        Email us to delete your account
+      </a>
+
+      <h2>What gets deleted</h2>
+      <p>When your account is deleted, the following data is permanently removed:</p>
+      <ul>
+        <li>Your profile (name, email address, role)</li>
+        <li>Your push notification token</li>
+        <li>Your association with any family group</li>
+      </ul>
+
+      <h2>What is retained</h2>
+      <p>The following data is retained after your account is deleted:</p>
+      <ul>
+        <li><strong>Sleep and feeding events you logged</strong> — these remain attached to the family group so other caregivers do not lose historical data. Your name may appear on past log entries as "logged by" but your account will no longer be accessible.</li>
+        <li><strong>Family data</strong> — if you are a member of a family group, the family itself and all associated baby data, daily summaries, and insights are not deleted when an individual account is deleted. Only the family owner can delete the entire family and all its data.</li>
+      </ul>
+
+      <div class="warning">
+        <p><strong>Note:</strong> If you are the family owner and want all family data deleted — including all logged events, baby records, and insights — please indicate this in your deletion request email. Full family data deletion is permanent and cannot be undone.</p>
+      </div>
+
+      <h2>Retention period</h2>
+      <p>Account deletion requests are processed within 30 days. After deletion, your personal profile data is permanently removed from our systems. Backup systems may retain data for up to an additional 30 days before it is fully purged.</p>
+
+      <h2>Questions</h2>
+      <p>If you have questions about your data or the deletion process, contact us at <a href="mailto:napwellapp@gmail.com">napwellapp@gmail.com</a>.</p>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:napwellapp@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 Napwell. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
