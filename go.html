@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Napwell — Redirecting...</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4EK7NMB67"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M4EK7NMB67');
+
+    var destinations = {
+      'ios': 'https://apps.apple.com/app/napwell/id6779501439',
+      'android': 'https://play.google.com/store/apps/details?id=com.napwell.app'
+    };
+
+    var params = new URLSearchParams(window.location.search);
+    var store = params.get('store');
+    var dest = destinations[store];
+
+    if (dest) {
+      gtag('event', 'app_store_click', {
+        'platform': store,
+        'location': 'qr_code'
+      });
+      setTimeout(function() { window.location.href = dest; }, 300);
+    } else {
+      window.location.href = '/';
+    }
+  </script>
+  <style>
+    body { font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #E8E2D5; color: #2D2A5E; }
+  </style>
+</head>
+<body>
+  <p>Redirecting to the app store...</p>
+</body>
+</html>
