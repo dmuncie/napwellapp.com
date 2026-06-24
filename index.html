@@ -166,8 +166,14 @@
       .footer-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
+<script>
+if ((navigator.language || navigator.userLanguage || "").toLowerCase().startsWith("es") && window.location.pathname === "/") {
+  window.location.replace("/es/");
+}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4EK7NMB67"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
