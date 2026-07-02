@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--
+  AFFILIATE STATUS: No Amazon Associates account exists yet (verified 2026-07-02).
+  Product links below are plain canonical Amazon links and earn no commission.
+  When Associates IS set up, make these three changes together:
+    1. Append ?tag=<associates-id> to every amazon.com/dp/ link.
+    2. Change rel="noopener nofollow" to rel="noopener sponsored" on product links.
+    3. Rewrite the disclosure paragraph (class="disclosure") to state that purchases
+       may earn a small commission at no extra cost to the buyer.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baby Gear We Actually Use — Napwell</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="description" content="Baby sleep, mealtime, bath, and play gear the Napwell family bought and uses every day. No sponsorships — just what worked for us." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #2D2A5E; --amber: #D4803A; --purple: #7F77DD; --teal: #1D9E75;
+      --bg: #E8E2D5; --card: #FFFFFF; --ink: #1A1830;
+      --ink-soft: rgba(45,42,94,0.65); --ink-muted: rgba(45,42,94,0.40);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 32px; background: rgba(232,226,213,0.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(45,42,94,0.08);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 32px; height: 32px; border-radius: 7px; }
+    .nav-logo-text { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; color: var(--navy); letter-spacing: -0.3px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a.active { color: var(--navy); }
+    .nav-cta { background: var(--navy) !important; color: #fff !important; padding: 8px 20px; border-radius: 999px; font-weight: 600 !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--purple) !important; }
+
+    .page-hero { max-width: 1100px; margin: 0 auto; padding: 148px 24px 16px; }
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--amber); margin-bottom: 14px; }
+    .page-title { font-family: 'Fraunces', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 300; color: var(--navy); letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 18px; }
+    .page-title em { font-style: italic; color: var(--amber); }
+    .page-intro { font-size: 16px; color: var(--ink-soft); line-height: 1.65; max-width: 560px; margin-bottom: 28px; }
+    .disclosure {
+      max-width: 640px; background: var(--card); border-left: 3px solid var(--amber);
+      border-radius: 12px; padding: 18px 22px; font-size: 14px; color: var(--ink-soft); line-height: 1.65;
+    }
+
+    .category { max-width: 1100px; margin: 0 auto; padding: 48px 24px 8px; }
+    .category:last-of-type { padding-bottom: 48px; }
+    .category-title { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 400; color: var(--navy); letter-spacing: -0.5px; display: flex; align-items: center; gap: 12px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 20px; margin-top: 28px; }
+    .product-card {
+      background: var(--card); border-radius: 20px; padding: 28px;
+      border: 1px solid rgba(45,42,94,0.06); box-shadow: 0 2px 12px rgba(45,42,94,0.06);
+      display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(45,42,94,0.10); }
+    .product-emoji { width: 44px; height: 44px; border-radius: 12px; background: rgba(45,42,94,0.06); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
+    .product-name { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 400; color: var(--navy); margin-bottom: 8px; }
+    .product-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.6; flex-grow: 1; }
+    .product-link { display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 600; color: var(--amber); text-decoration: none; transition: color 0.2s; }
+    .product-link:hover { color: var(--navy); }
+
+    .page-notes { max-width: 1100px; margin: 0 auto; padding: 8px 24px 80px; }
+    .page-notes p { font-size: 13px; color: var(--ink-muted); line-height: 1.6; max-width: 560px; }
+    .page-notes p + p { margin-top: 6px; }
+
+    footer { background: var(--navy); padding: 48px 32px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .footer-logo { font-family: 'Fraunces', serif; font-size: 18px; color: #fff; font-weight: 400; }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.9); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); width: 100%; margin-top: 8px; }
+
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .page-hero { padding: 120px 20px 16px; }
+      .category { padding: 40px 20px 8px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4EK7NMB67"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M4EK7NMB67');
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="/napwell-icon-1024.png" alt="Napwell" />
+    <span class="nav-logo-text">Napwell</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#features">Features</a></li>
+    <li><a href="/#how">How it works</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="/products" class="active">Gear</a></li>
+    <li><a href="mailto:napwellapp@gmail.com">Support</a></li>
+    <li><a href="/#download" class="nav-cta">Download</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <p class="section-label">Our picks</p>
+  <h1 class="page-title">Baby gear we <em>actually</em> use</h1>
+  <p class="page-intro">Twenty things that earned a permanent spot in our home — the sleep, mealtime, bath, and play gear that survived contact with a real baby.</p>
+  <div class="disclosure">Gear we bought ourselves and use every day with our own baby — nobody paid to be on this list, and we don't earn anything if you buy. Links go to Amazon for convenience.</div>
+</header>
+
+<!-- SLEEP & NURSERY -->
+<section class="category">
+  <h2 class="category-title"><span>🌙</span> Sleep &amp; Nursery</h2>
+  <div class="product-grid">
+    <div class="product-card"><div class="product-emoji">🌙</div><h3 class="product-name">Hatch Baby Sound Machine</h3><p class="product-desc">Sound machine, night light, Wi-Fi connected.</p><a class="product-link" href="https://www.amazon.com/dp/B0F7C6XJ3P" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Hatch Baby Sound Machine','category':'Sleep & Nursery'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🤍</div><h3 class="product-name">WubbaNub Infant Pacifier</h3><p class="product-desc">Stuffed animal pacifier. Easier for babies to hold.</p><a class="product-link" href="https://www.amazon.com/dp/B001BXREG8" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'WubbaNub Infant Pacifier','category':'Sleep & Nursery'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🗑️</div><h3 class="product-name">Munchkin Diaper Pail</h3><p class="product-desc">Keeps odors contained whether lid is open or closed.</p><a class="product-link" href="https://www.amazon.com/dp/B01MD1U7P6" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Munchkin Diaper Pail','category':'Sleep & Nursery'})">View on Amazon →</a></div>
+  </div>
+</section>
+
+<!-- MEALTIME -->
+<section class="category">
+  <h2 class="category-title"><span>🍽️</span> Mealtime</h2>
+  <div class="product-grid">
+    <div class="product-card"><div class="product-emoji">🪑</div><h3 class="product-name">Inglesina Portable High Chair</h3><p class="product-desc">Attaches to any table. Great for restaurants and travel.</p><a class="product-link" href="https://www.amazon.com/dp/B00IOGIM9S" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Inglesina Portable High Chair','category':'Mealtime'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🍽️</div><h3 class="product-name">Moonkie Silicone Placemats</h3><p class="product-desc">Stain-proof, non-slip toddler food mats. Easy to clean.</p><a class="product-link" href="https://www.amazon.com/dp/B09MTH5QL8" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Moonkie Silicone Placemats','category':'Mealtime'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🌊</div><h3 class="product-name">Blissful Diary Baby Splat Mat</h3><p class="product-desc">50x50 inch wipeable splash mat. Waterproof and washable.</p><a class="product-link" href="https://www.amazon.com/dp/B0BGRH4RNX" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Blissful Diary Baby Splat Mat','category':'Mealtime'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">👕</div><h3 class="product-name">Tiny Twinkle Long Sleeve Bib</h3><p class="product-desc">Waterproof sleeved bib. Keeps clothes clean during messy meals.</p><a class="product-link" href="https://www.amazon.com/dp/B0CHDSK81F" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Tiny Twinkle Long Sleeve Bib','category':'Mealtime'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🥤</div><h3 class="product-name">Zak Designs Kelso Toddler Cups</h3><p class="product-desc">Leak-proof sippy cups. Durable, easy for little hands.</p><a class="product-link" href="https://www.amazon.com/dp/B0DQTC8DRY" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Zak Designs Kelso Toddler Cups','category':'Mealtime'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🥛</div><h3 class="product-name">ezpz Tiny Cup</h3><p class="product-desc">Silicone training cup that suctions to the table.</p><a class="product-link" href="https://www.amazon.com/dp/B07SSG8GWT" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'ezpz Tiny Cup','category':'Mealtime'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🍼</div><h3 class="product-name">Moonkie Silicone Baby Sippy Cups</h3><p class="product-desc">Great transition from bottle to cup.</p><a class="product-link" href="https://www.amazon.com/dp/B0C77FCZZT" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Moonkie Silicone Baby Sippy Cups','category':'Mealtime'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🥨</div><h3 class="product-name">Munchkin Snack Catcher</h3><p class="product-desc">Spill-proof snack cups with flexible flaps.</p><a class="product-link" href="https://www.amazon.com/dp/B07NFZBSY2" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Munchkin Snack Catcher','category':'Mealtime'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🧊</div><h3 class="product-name">WeeSprout Silicone Freezer Tray</h3><p class="product-desc">Perfect for storing homemade baby food and purees.</p><a class="product-link" href="https://www.amazon.com/dp/B015NMLF3U" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'WeeSprout Silicone Freezer Tray','category':'Mealtime'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🫙</div><h3 class="product-name">Moonkie Silicone Baby Food Containers</h3><p class="product-desc">4oz airtight jars. Freezer, microwave, dishwasher safe.</p><a class="product-link" href="https://www.amazon.com/dp/B0C7G7X551" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Moonkie Silicone Baby Food Containers','category':'Mealtime'})">View on Amazon →</a></div>
+  </div>
+</section>
+
+<!-- BATH -->
+<section class="category">
+  <h2 class="category-title"><span>🛁</span> Bath</h2>
+  <div class="product-grid">
+    <div class="product-card"><div class="product-emoji">🌡️</div><h3 class="product-name">b&amp;h Baby Bath Thermometer</h3><p class="product-desc">Red = too hot, blue = too cool. Takes the guesswork out.</p><a class="product-link" href="https://www.amazon.com/dp/B0BMPKRFV8" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'b&h Baby Bath Thermometer','category':'Bath'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🐳</div><h3 class="product-name">Skip Hop Baby Bath Spout Cover</h3><p class="product-desc">Protects baby from bumps and makes bath time fun.</p><a class="product-link" href="https://www.amazon.com/dp/B001WAJVZM" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Skip Hop Baby Bath Spout Cover','category':'Bath'})">View on Amazon →</a></div>
+  </div>
+</section>
+
+<!-- PLAY & LEARNING -->
+<section class="category">
+  <h2 class="category-title"><span>🧸</span> Play &amp; Learning</h2>
+  <div class="product-grid">
+    <div class="product-card"><div class="product-emoji">📚</div><h3 class="product-name">LeapFrog Learning Friends 100 Words Book</h3><p class="product-desc">100 words in English and Spanish. A daily staple.</p><a class="product-link" href="https://www.amazon.com/dp/B07B6ZN7P8" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'LeapFrog Learning Friends 100 Words Book','category':'Play & Learning'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🟦</div><h3 class="product-name">Fisher-Price Baby's First Blocks</h3><p class="product-desc">10 colorful blocks for sorting, stacking, shape sorting.</p><a class="product-link" href="https://www.amazon.com/dp/B01NCUSC7V" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Fisher-Price Baby\'s First Blocks','category':'Play & Learning'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🧩</div><h3 class="product-name">Melissa and Doug Vehicle Knob Puzzle</h3><p class="product-desc">8-piece wooden jumbo knob puzzle. Great first puzzle.</p><a class="product-link" href="https://www.amazon.com/dp/B00HEZ08LU" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Melissa and Doug Vehicle Knob Puzzle','category':'Play & Learning'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">🐧</div><h3 class="product-name">Hape Penguin Wobbler</h3><p class="product-desc">Musical toy with built-in bell. Soothing tinkling sound.</p><a class="product-link" href="https://www.amazon.com/dp/B07217GBJB" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Hape Penguin Wobbler','category':'Play & Learning'})">View on Amazon →</a></div>
+    <div class="product-card"><div class="product-emoji">⚽</div><h3 class="product-name">Bright Starts Oball</h3><p class="product-desc">Flexible design babies can easily grip. Great first toy.</p><a class="product-link" href="https://www.amazon.com/dp/B00ZRD99C0" target="_blank" rel="noopener nofollow" onclick="gtag('event','product_click',{'product_name':'Bright Starts Oball','category':'Play & Learning'})">View on Amazon →</a></div>
+  </div>
+</section>
+
+<div class="page-notes">
+  <p>Light on newborn (0–6 month) gear for now — we'll keep adding to this list as our little one grows.</p>
+  <p>Prices and availability on Amazon can change at any time.</p>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Napwell</span>
+    <ul class="footer-links">
+      <li><a href="/products">Gear</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+      <li><a href="/terms.html">Terms of Service</a></li>
+      <li><a href="mailto:napwellapp@gmail.com">Support</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Napwell. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
