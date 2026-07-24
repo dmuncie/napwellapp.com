@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-en="Feedback — Napwell" data-es="Comentarios — Napwell">Feedback — Napwell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #2D2A5E; --amber: #D4803A; --purple: #7F77DD; --teal: #1D9E75;
+      --bg: #E8E2D5; --card: #FFFFFF; --ink: #1A1830;
+      --ink-soft: rgba(45,42,94,0.65); --ink-muted: rgba(45,42,94,0.40);
+      --rose: #C0392B;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.7; }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 32px; background: rgba(232,226,213,0.95);
+      border-bottom: 1px solid rgba(45,42,94,0.08);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 32px; height: 32px; border-radius: 7px; }
+    .nav-logo-text { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; color: var(--navy); }
+    .nav-back { font-size: 14px; color: var(--ink-soft); text-decoration: none; }
+    .nav-back:hover { color: var(--navy); }
+    .container { max-width: 720px; margin: 0 auto; padding: 64px 24px 100px; }
+    .page-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--amber); margin-bottom: 14px; }
+    h1 { font-family: 'Fraunces', serif; font-size: 42px; font-weight: 300; color: var(--navy); letter-spacing: -1px; line-height: 1.1; margin-bottom: 12px; }
+    .intro { font-size: 16px; color: var(--ink-soft); margin-bottom: 40px; max-width: 560px; }
+    .content { background: var(--card); border-radius: 20px; padding: 48px; border: 1px solid rgba(45,42,94,0.06); }
+    .field-label { display: block; font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 6px; margin-top: 24px; }
+    .field-label:first-of-type { margin-top: 0; }
+    .field-label .opt { font-weight: 400; color: var(--ink-muted); }
+    input[type=text], input[type=email], select, textarea {
+      width: 100%; font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--ink);
+      background: #fff; border: 1px solid rgba(45,42,94,0.18); border-radius: 12px;
+      padding: 12px 14px; transition: border-color 0.2s;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--purple); }
+    textarea { min-height: 150px; resize: vertical; line-height: 1.6; }
+    .submit-btn {
+      display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: #fff;
+      border: none; cursor: pointer; padding: 14px 28px; border-radius: 12px; font-size: 15px;
+      font-weight: 600; font-family: 'DM Sans', sans-serif; margin-top: 30px; transition: background 0.2s;
+    }
+    .submit-btn:hover { background: var(--purple); }
+    .submit-btn:disabled { opacity: 0.6; cursor: default; }
+    .hidden-field { display: none; }
+    .context-note { font-size: 12px; color: var(--ink-muted); margin-top: 22px; }
+    .email-note { font-size: 14px; color: var(--ink-soft); margin-top: 28px; }
+    .email-note a { color: var(--teal); text-decoration: none; }
+    .email-note a:hover { text-decoration: underline; }
+    .form-error { color: var(--rose); font-size: 14px; margin-top: 16px; display: none; }
+    .success { display: none; text-align: center; padding: 24px 8px; }
+    .success .check {
+      width: 56px; height: 56px; border-radius: 50%; background: rgba(29,158,117,0.12);
+      color: var(--teal); display: flex; align-items: center; justify-content: center;
+      font-size: 28px; margin: 0 auto 20px;
+    }
+    .success h2 { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 400; color: var(--navy); margin-bottom: 10px; }
+    .success p { font-size: 15px; color: var(--ink-soft); }
+    footer { background: var(--navy); padding: 32px; text-align: center; }
+    footer p { font-size: 13px; color: rgba(255,255,255,0.4); margin: 0; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; margin: 0 12px; }
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .container { padding: 40px 20px 80px; }
+      .content { padding: 28px 20px; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="napwell-icon-1024.png" alt="Napwell" />
+      <span class="nav-logo-text">Napwell</span>
+    </a>
+    <a href="index.html" class="nav-back" data-en="← Back to home" data-es="← Volver al inicio">← Back to home</a>
+  </nav>
+  <div class="container">
+    <p class="page-label" data-en="Feedback" data-es="Comentarios">Feedback</p>
+    <h1 data-en="Share your feedback" data-es="Comparte tus comentarios">Share your feedback</h1>
+    <p class="intro" data-en="Found a bug, want a feature, or just have a thought? Tell us — we read every message." data-es="¿Encontraste un error, quieres una función o tienes una idea? Cuéntanos: leemos todos los mensajes.">Found a bug, want a feature, or just have a thought? Tell us — we read every message.</p>
+    <div class="content">
+      <form name="feedback" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="feedback-form">
+        <input type="hidden" name="form-name" value="feedback" />
+        <p class="hidden-field">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <label class="field-label" for="name" data-en="Your name <span class='opt'>(optional)</span>" data-es="Tu nombre <span class='opt'>(opcional)</span>">Your name <span class="opt">(optional)</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" />
+
+        <label class="field-label" for="email" data-en="Email <span class='opt'>(optional — only if you'd like a reply)</span>" data-es="Correo <span class='opt'>(opcional — solo si quieres respuesta)</span>">Email <span class="opt">(optional — only if you'd like a reply)</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" />
+
+        <label class="field-label" for="type" data-en="What's this about?" data-es="¿De qué se trata?">What's this about?</label>
+        <select id="type" name="type">
+          <option value="Feature request" data-en="Feature request" data-es="Sugerencia de función">Feature request</option>
+          <option value="Bug report" data-en="Bug report" data-es="Reporte de error">Bug report</option>
+          <option value="General feedback" data-en="General feedback" data-es="Comentario general">General feedback</option>
+        </select>
+
+        <label class="field-label" for="message" data-en="Your feedback" data-es="Tus comentarios">Your feedback</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="hidden" name="app_version" id="app_version" />
+        <input type="hidden" name="platform" id="platform" />
+        <input type="hidden" name="locale" id="locale" />
+
+        <button type="submit" class="submit-btn" data-en="Send feedback" data-es="Enviar comentarios">Send feedback</button>
+        <p class="form-error" id="form-error" data-en="Something went wrong sending your feedback. Please email napwellapp@gmail.com instead." data-es="Algo salió mal al enviar tus comentarios. Por favor escríbenos a napwellapp@gmail.com.">Something went wrong sending your feedback. Please email napwellapp@gmail.com instead.</p>
+      </form>
+
+      <div class="success" id="success">
+        <div class="check">✓</div>
+        <h2 data-en="Thank you!" data-es="¡Gracias!">Thank you!</h2>
+        <p data-en="Your feedback has been sent. We appreciate you taking the time." data-es="Tus comentarios se enviaron. Gracias por tomarte el tiempo.">Your feedback has been sent. We appreciate you taking the time.</p>
+      </div>
+
+      <p class="context-note" data-en="We'll automatically include your app version and device type so we can help faster." data-es="Incluiremos automáticamente la versión de tu app y el tipo de dispositivo para ayudarte más rápido." id="context-note">We'll automatically include your app version and device type so we can help faster.</p>
+
+      <p class="email-note"><span data-en="Prefer email? Write to" data-es="¿Prefieres correo? Escríbenos a">Prefer email? Write to</span> <a href="mailto:napwellapp@gmail.com">napwellapp@gmail.com</a></p>
+    </div>
+  </div>
+  <footer>
+    <p>
+      <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+      <a href="privacy.html" data-en="Privacy Policy" data-es="Privacidad">Privacy Policy</a>
+      <a href="terms.html" data-en="Terms of Service" data-es="Términos">Terms of Service</a>
+      <a href="mailto:napwellapp@gmail.com" data-en="Contact" data-es="Contacto">Contact</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 Napwell. All rights reserved.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+
+      // Pre-fill hidden context fields from the app-provided query params.
+      document.getElementById('app_version').value = params.get('version') || '';
+      document.getElementById('platform').value = params.get('platform') || '';
+      document.getElementById('locale').value = params.get('locale') || '';
+
+      // Locale-aware labels: Spanish when the app opens with ?locale=es
+      var lang = (params.get('locale') || 'en').toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+      if (lang === 'es') {
+        document.documentElement.lang = 'es';
+        document.querySelectorAll('[data-es]').forEach(function (el) {
+          if (el.tagName === 'TITLE') { el.textContent = el.getAttribute('data-es'); }
+          else { el.innerHTML = el.getAttribute('data-es'); }
+        });
+      }
+
+      // AJAX submit so we can show an on-brand thank-you without leaving the page.
+      var form = document.getElementById('feedback-form');
+      var errorEl = document.getElementById('form-error');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errorEl.style.display = 'none';
+        var btn = form.querySelector('.submit-btn');
+        btn.disabled = true;
+        var body = new URLSearchParams(new FormData(form)).toString();
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body
+        }).then(function (res) {
+          if (!res.ok) { throw new Error('bad status'); }
+          form.style.display = 'none';
+          document.getElementById('context-note').style.display = 'none';
+          document.getElementById('success').style.display = 'block';
+        }).catch(function () {
+          btn.disabled = false;
+          errorEl.style.display = 'block';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
